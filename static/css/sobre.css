@@ -1,0 +1,160 @@
+/* Fonte especial */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap');
+
+/* Reseta as margens e configurações de padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte principal e cores de fundo/texto */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5f8;
+    color: #5c2a3e;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #ff9eb3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5c2a3e;
+    font-family: 'Pacifico', cursive;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul.menu li {
+    margin-left: 20px;
+}
+
+nav ul.menu li a {
+    color: #5c2a3e;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul.menu li a:hover {
+    background-color: #ffccd4;
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #5c2a3e;
+    margin: 4px 0;
+}
+
+/* Estilo da seção Sobre */
+.about-section {
+    background-color: #ffe0e6;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    color: #d83f87;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #5c2a3e;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #d83f87;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #5c2a3e;
+    margin-bottom: 20px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #ff9eb3;
+    color: #5c2a3e;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul.menu {
+        flex-direction: column;
+        display: none;
+        align-items: center;
+    }
+
+    nav ul.menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+

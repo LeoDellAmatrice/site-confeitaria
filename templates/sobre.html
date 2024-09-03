@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Confeitaria Sempre Doce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css') }}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Confeitaria Sempre Doce</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cardapio">Cardápio</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a>Sobre</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Sobre -->
+    <main>
+        <section class="about-section">
+            <h1>Sobre Nós</h1>
+            <p>Bem-vindo à Confeitaria Sempre Doce! Nós somos uma equipe apaixonada por criar delícias que aquecem o coração e alegram o paladar.</p>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/confeitaria.jpg') }}" alt="Sobre a Confeitaria">
+                </div>
+                <div class="about-text">
+                    <h2>Nossa História</h2>
+                    <p>Fundada em 2020, a Confeitaria Sempre Doce começou com o sonho de oferecer produtos de confeitaria feitos com ingredientes frescos e de alta qualidade. Desde então, temos nos dedicado a criar receitas exclusivas e deliciosas para nossos clientes.</p>
+                    <h2>Missão e Visão</h2>
+                    <p>Nosso compromisso é oferecer uma experiência de sabor inigualável. Acreditamos que cada produto deve ser uma celebração da paixão pela confeitaria. Nossa visão é ser reconhecida como a principal confeitaria da região, conhecida pela qualidade e inovação.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

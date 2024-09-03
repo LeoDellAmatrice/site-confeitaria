@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Confeitaria Sempre Doce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contato.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Confeitaria Sempre Doce</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cardapio">Cardápio</a></li>
+                <li><a>Contato</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para atender você!</p>
+
+            <div class="contact-form-container">
+                <form action="/submit_form" method="POST" class="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <div class="contact-info">
+                    <h2>Nosso Endereço</h2>
+                    <p>Rua do Açúcar, 123, Bairro Doce, São Paulo, SP</p>
+
+                    <h2>Telefone</h2>
+                    <p>(11) 1234-5678</p>
+
+                    <h2>Email</h2>
+                    <p>contato@sempredoce.com.br</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

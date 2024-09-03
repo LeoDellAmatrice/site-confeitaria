@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Confeitaria Sempre Doce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css') }}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Confeitaria Sempre Doce</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a>Cardápio</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção de Cardápio -->
+    <main>
+        <section class="menu-section">
+            <h1>Nosso Cardápio</h1>
+            <p>Delícias frescas e feitas com amor!</p>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo_chocolate.png') }}" alt="Bolo de Chocolate">
+                    <h2>Bolo de Chocolate</h2>
+                    <p>R$ 25,00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/cupcake.png') }}" alt="Cupcake">
+                    <h2>Cupcakes</h2>
+                    <p>R$ 8,00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/torta_frutas.png') }}" alt="Torta de Frutas">
+                    <h2>Torta de Frutas</h2>
+                    <p>R$ 30,00</p>
+                </div>
+                <!-- Adicione mais itens do cardápio aqui -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
